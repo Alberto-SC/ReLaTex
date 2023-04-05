@@ -163,7 +163,6 @@
 \newcommand{\taglinefont}{\large\bfseries}
 \newcommand{\personalinfofont}{\small\bfseries}
 \newcommand{\cvsectionfont}{\Large\bfseries}
-\newcommand{\cvsubsectionfont}{\large\bfseries}
 
 % Define the header of the CV
 \newcommand{\makecvHeader}{%
