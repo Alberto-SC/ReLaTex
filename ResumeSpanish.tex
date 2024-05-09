@@ -1,0 +1,172 @@
+%% Eliminar las opciones del paquete Resume para cambiar las propiedades de tu currículum, las opciones son:
+%% TODO
+%% iconos: Para usar iconos de Font Awesome para cosas como: enlaces, repositorios de GitHub, iconos de contacto (correo electrónico, teléfono, LinkedIn, etc.)
+%% colores: Hay solo dos colores, pero puedes eliminar la segunda opción utilizada principalmente para los encabezados para eliminar esta opción
+
+\documentclass[9pt,a4paper,icons,colors]{Resume}
+
+\geometry{left=1cm,right=1cm,top=0.8cm,bottom=0.8cm,columnsep=0.6cm}
+
+%% Coloca tu fuente favorita aquí
+\setmainfont{Lato}
+
+%% Define colores personalizados, por ejemplo:
+
+%% Para encabezados y separadores principales
+\definecolor{VividPurple}{HTML}{3E0097}
+
+%% Para subencabezados y enlaces
+\definecolor{SlateGrey}{HTML}{1E1E1E}
+
+%% Texto principal
+\definecolor{LightGrey}{HTML}{555555}
+
+%% Balas de tecnología
+\definecolor{Black}{HTML}{60b41f}
+
+%% Aplicar colores
+
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\colorlet{technologies}{Black}
+
+\begin{document}
+\name{Alberto Silva Cazares}
+\tagline{Ingeniero en sistemas computacionales / Full Stack developer}
+
+%% Los campos disponibles son
+%% \email{}
+%% \mailaddress{}
+%% \phone{}
+%% \homepage{}
+%% \twitter{}
+%% \linkedin{}
+%% \github{}
+%% \orcid{}
+%% \location{}
+%% \medium{}
+
+%% Puedes usar cualquier otro icono con el comando \printinfo{\fa<NombreDelIcono>}{Texto}
+%% Todos los iconos provienen de Font Awesome, consulta http://mirrors.ibiblio.org/CTAN/fonts/fontawesome/doc/fontawesome.pdf
+
+\personalinfo{
+  \email{silvacazaresluis@outlook.com}
+  \phone{+52 5540969864}
+  \location{CDMX, México}
+  \homepage{alberto-sc.vercel.app}
+  \linkedin{alberto-silva-358955175}
+  \github{alberto-sc} 
+  \english{MCER B2}
+}
+
+\makecvHeader
+
+\columnratio{0.6}
+%% Comienza el contexto de columnas, la primera columna es la primera que aparece.
+\begin{paracol}{2}
+
+\cvsection{Acerca de mí}
+Ingeniero de software con sólidos conocimientos en desarrollo de software, apasionado por resolver problemas complejos que requieren optimización o desarrollo de algoritmos complejos. Dispuesto a asumir nuevos desafíos y colaborar en proyectos retadores con el objetivo de seguir creciendo como profesional y contribuir al mundo de la tecnología con soluciones eficientes.
+
+\cvsection{Experiencia relevante}
+%% Para crear un proyecto, usa el siguiente comando:
+%% \cvproject{Nombre}{Fecha}{EnlaceDelProyecto, sitio web, repositorio o también puede estar vacío}
+%% {Puntos separados por | }
+%% {Habilidades/Tecnologías utilizadas}
+\cvproject
+{Dochain (Backend)}{Ethereum Developer Program 2022}
+{\website{https://dochain.vercel.app/}{dochain.vercel.app} \githublink{https://github.com/Dochain1}}
+{Desarrollo de una DAPP que permite almacenar archivos privados y compartibles en blockchain }
+{Integración y pruebas de contratos inteligentes para el almacenamiento seguro de documentos.|
+Desarrollo de una arquitectura pensada en la privacidad y confidencialidad de los datos. |
+Creación de una API REST} 
+{Node.js, Truffle suite, Ethereum, SQL, IPFS, GraphQL}
+
+\divider
+
+\cvproject
+{Safemessenger}{2021/22}
+{\website{https://safemessenger.xyz}{Safemessenger.xyz} (servicio caído debido a costos)}
+{Proyecto de titulación, creación de una inteligencia artificial para clasificar texto con el objetivo de prevenir el bullying en redes sociales}
+{Diseño, creación y entrenamiento de redes neuronales convolucionales |
+Uso de web sockets para mensajes en tiempo real |
+Creación de un servicio de mensajería utilizando React.js}
+{Node.js, React.js, Socket.io, Python, Tensorflow, Flask, Nginx}
+\divider
+
+\cvproject
+{Freelance}{2021}
+{}
+{Desarrollo de una aplicación web interna para administrar las finanzas de los empleados}
+{Creación de un panel CRUD para administrar la información de los empleados | 
+Implementación, administración y despliegue en un entorno privado. |
+Creación de informes en formato PDF listos para imprimir}
+{HTML, CSS, Python, Django, SQL, Linux}
+\divider
+
+\cvproject
+{Implementación web del juego de la vida de Conway}{2020}
+{\githublink{https://github.com/alberto-sc/Game-Of-life}}
+{Implementación del famoso juego de la vida de Conway}
+{Una implementación parcial del algoritmo hashlife para obtener optimización de espacio con espacio infinito |
+Desarrollo de la estructura de datos QuadTree para mejorar el rendimiento |
+Uso de D3.js para la visualización de conjuntos de datos grandes}
+{Javascript, HTML canvas, D3.js}
+\divider
+
+\cvproject
+{Referencia competitiva}{desde 2020}
+{\githublink{https://github.com/Alberto-SC/Reference}}
+{Una colección de varios algoritmos útiles para programación competitiva, así como soluciones a problemas/concursos de programación}
+{Más de 2000+ soluciones a desafíos de programación |
+Más de 20+ concursos ICPC incluidas finales regionales de diferentes países | 
+Colección de algoritmos y estructuras de datos básicos y avanzados de la mayoría de áreas de algoritmos, incluyendo grafos, matemáticas, cadenas, optimización, etc., en su mayoría implementados por mí}
+{C++, Python, Go, Javascript, Rust, SQL, LaTeX}
+
+\switchcolumn
+
+\cvsection{Educación}
+
+\cvevent{Ingeniería en Sistemas Computacionales}{Escuela Superior de Cómputo}{2017 - 2022- 2023 en trámite}{}
+\cvevent{Ethereum Developer Program}{Platzi - Fundación Ethereum}{mayo de 2022 - octubre de 2022}{}
+\cvevent{Educación en línea}{Platzi, FreeCodeCamp}{2020 - en curso}{}
+
+\cvsection{Habilidades técnicas}
+
+%% cvskills toma una lista de elementos separados por comas y coloca cada uno en una etiqueta redondeada. 
+\cvskills{Desarrollo Full Stack}{Javascript, HTML y CSS, React.js, Node.js
+, Next.js, GraphQL, SQL (PostgreSQL), MongoDB, Prisma (ORM)}
+\cvskills{Blockchain}{Solidity, Hardhat,
+Truffle suite, Web3.js / Ether.js}
+\cvskills{Relacionado con DevOps}{Administración de servidores Linux, Docker, Nginx, Azure DevOps, Git, GitHub Actions}
+\cvskills{Cloud}{AWS, Azure (Certificado AZ-900)}
+
+\cvsection{Lenguajes de programación}
+\cvlanguaje{Javascript}{3+ años}{Principalmente para desarrollo full stack con React.js y Node.js}
+\cvlanguaje{Python}{4+ años}{Principalmente para programación competitiva, además de: web frameworks, ML frameworks, scripting }%% Soporta valores X.5.
+\cvlanguaje{C++}{6+ años}{Principalmente para programación competitiva}
+\cvlanguaje{LaTeX}{3+ años}{Creación de documentos y material educativo} 
+\cvlanguaje{Bash/Lua}{1+ años}{Scripting básico-intermedio para herramientas personales}
+\cvlanguaje{Golang}{medio año}{Servicios backend}
+
+\cvsection{Premios y actividades}
+\cvachievement{\faTrophy}{Participante en ICPC}{ 
+  Participante en el gran premio de México 2022/23 y finalista regional ubicándome en el top 6° de más de 300 equipos como mejor resultado individual y 9° como mejor posición nacional global (circuito de 4 concursos).
+  También participé en 2021, 2020, 2019 y 2018; para otros años, se puede consultar en \urlNewWindow{https://icpc.global/ICPCID/44QVI83TR89J}.
+}
+\divider
+
+\cvachievement{\faCode}{Programador competitivo}{ 
+  Como parte de mi entrenamiento para el concurso ICPC, y como pasatiempo, participo habitualmente en la mayoría de las plataformas competitivas más famosas, como Codeforces, CodeChef, LeetCode, donde formo parte del 1\% superior en todo el mundo en algunas de ellas, como LeetCode, donde actualmente ocupo la posición 880/400k+. Compito regularmente con más de 100k+ usuarios activos. Puedes encontrar mis otras clasificaciones en \url{https://clist.by/coder/BetoSCL/}.
+}
+\divider
+
+\cvachievement{\faChalkboardTeacher}{Profesor}{ 
+  Como contribución a la comunidad, fui profesor en temas relacionados con programación competitiva, como estructuras de datos avanzadas, algoritmos de cadenas y búsqueda binaria, buscando ofrecer una preparación de alta calidad para la competición ICPC para obtener un lugar en las finales regionales. También contribuyo y he ofrecido mentoría en estructuras de datos y algoritmos en plataformas de aprendizaje, como LeetCode, se pueden encontrar algunas de mis contribuciones en mi perfil de leetcode \url{https://leetcode.com/BetoSCL/}{perfil}.
+}
+
+\end{paracol}
+\end{document}

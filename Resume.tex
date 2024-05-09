@@ -1,0 +1,196 @@
+
+%% Remove the options from the package Resume to change the properties of you resume, options are:  
+%% TODO
+%% icons: To use fontawesome icons for things like: links, github repositories, contant icons(mail phone, linkedin etc)
+%% colors: There are only two colors but you can turn out the second color used mainly for headlines removing this option 
+
+\documentclass[9.5pt,a4paper,icons,colors]{Resume}
+
+
+
+
+\geometry{left=1cm,right=1cm,top=0.8cm,bottom=0.8cm,columnsep=0.6cm}
+
+%% Put you favorite font here
+\setmainfont{Lato}
+
+%% Define custom colors, example:
+
+%% For headings and main separators
+\definecolor{VividPurple}{HTML}{3E0097}
+
+%% For subheadings and links
+\definecolor{SlateGrey}{HTML}{1E1E1E}
+
+%% Main text
+\definecolor{LightGrey}{HTML}{555555}
+
+%% Technology bullets
+\definecolor{Black}{HTML}{60b41f}
+
+%% Apply colors 
+
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\colorlet{technologies}{Black}
+
+
+\begin{document}
+\name{Alberto Silva Cazares}
+\tagline{Computer Systems Engineer}
+
+%% Available fields are
+%% \email{}  
+%% \mailaddress{}
+%% \phone{}
+%% \homepage{}
+%% \twitter{}
+%% \linkedin{}
+%% \github{}
+%% \orcid{}
+%% \location{}
+%% \medium{}
+
+%% You can use any other icon with the command \printinfo{\fa<NameOfIcon>}{Text}
+%% All icons came from font awesome see http://mirrors.ibiblio.org/CTAN/fonts/fontawesome/doc/fontawesome.pdf
+
+
+%% Any definition accept a second optional parameter to change the display text if the suffix are to long or have unwanted tokens, for example:
+%% \linkedin{alberto-silva-358955175}[alberto silva]
+%% This only have sense in where the personal info are created with a preffix link like \linkedin which is defined as
+%% \NewInfoField{linkedin}{\faLinkedin}[https://linkedin.com/in/]
+
+\personalinfo{
+  \email{silvacazaresluis@outlook.com}
+  \phone{+52 5540969864}
+  \location{CDMX, México}
+  \homepage{alberto-sc.vercel.app}
+  \linkedin{alberto-silva-358955175}[alberto silva]
+  \github{alberto-sc} 
+  \english{MCER B2+}
+}
+
+\makecvHeader
+
+\columnratio{0.6}
+%% Start column context, First column come first
+\begin{paracol}{2}
+
+\cvsection{About}
+
+I am a software engineer with skill set in software development, with a preference for backend development.
+My expertise lies in tackling intricate challenges that demand optimization, algorithm development, and complex problem solving.
+I am deeply passionate about embracing a DevOps mindset and cultivating a culture centered around it.
+
+
+\cvsection{Relevant experience/projects}
+
+%% To create a project call the command:
+%% \cvproject{Name}{Date}{ProjectLink, website, repo, or also can be empty}
+%% {Bullet points separated with | }
+%% {Skills/Technologies used}
+
+\cvproject
+{Dochain}{2022}
+{\website{https://dochain.vercel.app/}{dochain.vercel.app} \githublink{https://github.com/Dochain1}}
+{Develop of a DAPP that allow you to store private and shareable files in blockchain (Work in backend) }
+{Blockchain and smart contract as backend |
+Development of graphql server that works as a hub for many services |
+Use of The graph protocol to index blockchain data} 
+{Node js,GraphQL,Truffle suite,The graph protocol}
+
+\divider
+
+\cvproject
+{Safemessenger}{2021}
+{\website{https://safemessenger.xyz}{Safemessenger.xyz} (main service down because cost)}
+{Degree project, creation of an artificial intelligence to classify text }
+{Use of convolutional neural networks |
+Use of web sockets to real time messages |
+Creation of a messaging service using react js}
+{Node js,React js,Socket io,Tensorflow,flask,nginx}
+\divider
+
+\cvproject
+{Freelance}{2021}
+{}
+{Development of internal web application to manage employees' finances}
+{Creation of CRUD dashboard to manage employee information | 
+Deployment in a private and secure environment. |
+Creation of reports in pdf form ready for printing}
+{HTML, CSS,Python , Django, SQL}
+\divider
+
+\cvproject
+{Conway game of life web implementation}{2020}
+{\githublink{https://github.com/alberto-sc/Game-Of-life}}
+{Implementation of the famous Conway's game of life}
+{A partial implementation of the algorithm hashlife to get space optimization with infinite canvas |
+Develpment of a datastructure quadtree to improve performance |
+Use of D3 js for visualization of large set of data}
+{Javascript,HTML canvas,D3 js}
+\divider
+
+\cvproject
+{Competitive reference}{since 2020}
+{\githublink{https://github.com/Alberto-SC/Reference}}
+{A collection of several algorithms usefull for competitive programming and solutions of many programming challenges/contest}
+{More than 2000+ solutions to programming challenges |
+More than 20+ ICPC contest included regional finals of many countries}
+{C++,python,Latex,React,Next js}
+
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{Bachelor’s degree in Computer Systems}{Escuela superior de cómputo}{2017 - 2023}{}
+\cvevent{Ethereum developer programm }{Platzi - Ethereum foundation}{May 2022 - October 2022}{}
+\cvevent{Online education}{Platzi, Udemy, Freecodecamp,Coursera}{2020 - Ongoing}{}
+
+\cvsection{Technical skills}
+
+%% cvskills take a list of elements separated with comas and put each one in a rounded tag. 
+\cvskills{Development}{Javascript,Typescript,HTML \& CSS,React,Node
+,Next js,SQL,python,Django,scikit-learn,git,JSON,Chai}
+\cvskills{DevOps related}{Linux,Docker,Kubernetes,Terraform,Jenkins,\URL{https://www.cloudskillsboost.google/public_profiles/6a309572-fa53-4e7d-9e8b-30b109ec7020}{GCP skillbost profile}}
+\cvskills{Cloud}{Aws,Azure ,\URL{https://www.credly.com/badges/b7f66df0-1446-410d-aceb-24547d1c1781}{AZ-900 certified},GCP, Digital ocean}
+
+\cvsection{Programming languages}
+\cvlanguaje{Javascript}{3+ years}{Mainly for Fullstack development}
+\cvlanguaje{Python}{4+ years}{intermeditate in data science and competitive programming,also some knowledge in web frameworks (django,flask)}%% supports X.5 values.
+\cvlanguaje{C++}{6+ years}{Mainly for competitive programming}
+\cvlanguaje{Latex}{3+ years}{To create documents, like this resume template and educational material} 
+
+%% You can end and start a new multi column enviroment, depending of the space you have, uncomment this three lines and the \swithcolumn line 
+%% to get another distribution 
+% \end{paracol}
+% \columnratio{0.5}
+% \begin{paracol}{2}
+
+\cvsection{Awards and activities}
+\cvachievement{\faTrophy}{ICPC contestant}{ 
+  Participant of grant prize of México 2022/23 finishing in 13th place of 200+ teams,
+  and also participant in 2021,2020,2019 \& 2018, for the other years see 
+  \URL{https://icpc.global/ICPCID/44QVI83TR89J}{ICPC ID}
+}
+\divider
+
+\cvachievement{\faCode}{Competitive programmer}{ 
+  As part of my training for the ICPC contest, but also as a hobby usually I participate in most of the most famous competitive platforms like (Codeforces , CodeChef , LeetCode)
+   being part of the top 1\% worldwide in some of them, being my best place in the top 0.2\% on leetcode with more than 500k users  \URL{https://clist.by/coder/BetoSCL/}{Other rankings}}
+\divider
+% \switchcolumn
+
+\cvachievement{\faChalkboardTeacher}{Teacher}{ 
+  As a contribution to the community I was a teacher on topics related to competitive programming such as advanced data structures, string algorithms and binary search. 
+  in order to offer high quality preparation to attend 
+  to attend the ICPC competition and find a place in the regional finals, I also used to publish detailed solutions 
+  to algorithmic challenges at \URL{https://leetcode.com/BetoSCL/}{LeetCode}.
+}
+
+
+\end{paracol}
+\end{document}
