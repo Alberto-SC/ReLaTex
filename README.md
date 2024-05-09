@@ -75,7 +75,22 @@ Name and tagline are autodescriptive, now personalinfo is a set of common ways o
 - \location{}
 - \medium{}
 
-All of them are links and some of them accept only the user and behind the link will be completed.
+Some of them are links and some of them accept only the user and behind the link will be completed.
+Also for the ones with a link you can use a second parameter to change the display text if the username it's not desirable to show.
+
+For example in linkedin sometimes you have extra numbers to define your username and your page like 
+this. 
+
+  ```latex
+   \linkedin{alberto-silva-358955175}
+  ```
+
+In that case the numbers will be printed, instead you can use the third parameter to change the text:
+
+  ```latex
+   \linkedin{alberto-silva-358955175}[alberto silva]
+  ```
+
 
 You can add more info with no pre build command with \printinfo
 
